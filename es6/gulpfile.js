@@ -9,4 +9,8 @@ gulp.task('js', () => {
         .pipe(gulp.dest('./public'));
 });
 
-gulp.task('default', () => {});
+gulp.task('default', () => {
+    gulp.watch('src/app.js', (cb) => {
+        gulp.series(['js'])(cb);
+    });
+});
