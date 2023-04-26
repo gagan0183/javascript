@@ -1,7 +1,6 @@
 "use strict";
 
 var object = {
-    name: "test"
+  name: "test"
 };
-
-console.log("The object name is " + object.name);
+console.log("The object name is ".concat(object.name));
