@@ -73,3 +73,15 @@ console.log(studentEntries.next());
 let copyArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 copyArray.copyWithin(0, 3, 6);
 console.log(copyArray);
+
+// call and apply
+
+const sum = function() {
+  console.log(typeof arguments);
+  // we cannot use reduce directly on arguments as it is not an array
+  return arguments.reduce( (pre,cur) => {
+    return pre + cur;
+  });  
+};
+
+const total = sum(1,2,3,4);
